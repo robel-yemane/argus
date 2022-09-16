@@ -92,6 +92,6 @@ func main() {
 	http.HandleFunc("/edit/", makeHandler(editHandler))
 	http.HandleFunc("/save/", makeHandler(saveHandler))
 	hostname, _ := os.Hostname()
-	log.Printf("Serving on host %s & port %d", hostname, 8080)
+    log.Printf("Serving on host: %s & port: %d", hostname, 8080)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
